@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Tint&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body {
+    box-sizing: border-box;
+    background-color: #FEF3E2;
+    color: #708871;   
+}
+.header{
+    padding: 2% 0% 0% 8%; 
+}
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+.header__menu_link{
+    font-family: "Krona One", sans-serif;
+    font-size: 20px;
+    color: #606676;
+    text-decoration: none;
+}
+.titulo-destacado {
+    color: #606676;
+    font-size: 36px;
+    font-family: "Krona One", sans-serif;
+}
+.presentacion {
+    padding: 2% 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.presentacion__contenido {
+    width: 100%;
+    max-width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.presentacion__contenido__titulo {
+    font-size: 28px;
+    font-family: "Krona One", sans-serif;
+}
+.presentacion__contenido__texto {
+    font-family: "Montserrat", sans-serif;
+    font-size: 22px;
+    text-shadow: 4px 4px 4px #aaa;
+}
+.presentacion__enlaces {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.presentacion__enlaces__repositorios{
+    width: 100%;
+    margin: 25px 10px;
+    max-width: 388px;
+    max-height: 22px;
+    border-radius: 8px;
+    text-align: center;
+    padding: 16px 0px;
+    background-color: #FEF3E2;
+    color: #708871;
+    font-size: 21px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px outset #606676;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.presentacion__enlaces__repositorios img {
+    width: 20px;
+    height: 20px;
+    display: flex;
+}
+.presentacion__enlaces__repositorios:hover{
+    background-color: #BEC6A0;
+}
+.presentacion__enlaces__subtitulo{
+    width: 100%;
+    max-width: 378px;
+    padding: 16px 0;
+    font-family: "Krona One", sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.presentacion__enlaces__link, .button {
+    width: 100%;
+    max-width: 378px;
+    border-radius: 8px;
+    text-align: center;
+    padding: 16px 0px;
+    background-color: #FEF3E2;
+    color: #664343;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px outset #606676;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.presentacion__enlaces__link img {
+    width: 35px;
+    display: flex;
+}
+.presentacion__enlaces__link:hover{
+    background-color: #BEC6A0;
+}
+.image   {
+    display:none;
+    margin: 30px;
+    width: 100%;
+    max-width: 350px;
+}
+/* Mostrar la imagen cuando se pasa el mouse sobre el botón */
+.button:hover + .image {
+        display:grid;
+}
+
+.button:hover {
+    background-color: #BEC6A0;
+}
+.button img {
+    width: 35px;
+    display:flex;
+}
+.presentacion__tecnologias {
+    display: flex;
+    place-items: center;
+    height: 150px;
+    margin: 10px 20% 10px;
+}
+.footer{
+    background-color: white;
+    text-align: center;
+    padding: 16px;
+    color: #606676;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.footer img {
+    width: 35px;
+    display: flex;
+}
+/* Estilos para pantallas pequeñas (celulares) */
+@media screen and (max-width: 768px) {
+    .header__menu {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .titulo-destacado {
+        font-size: 28px;
+    }
+
+    .presentacion__contenido__texto {
+        font-size: 18px;
+    }
+
+    .presentacion__enlaces__link, .button {
+        font-size: 18px;
+    }
+
+    .presentacion__tecnologias {
+        margin: 10px 5%;
+        flex-direction: column;
+    }
+
+    .image {
+        max-width: 300px;
+    }
+}
+/* Estilos para pantallas grandes (computadoras) */
+@media screen and (min-width: 769px) {
+    .presentacion {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .presentacion__contenido {
+        width: 615px;
+    }
+
+    .presentacion__enlaces__link, .button {
+        max-width: 378px;
+    }
+}
